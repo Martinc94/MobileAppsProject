@@ -19,6 +19,8 @@ namespace Match_Tracker
     {
         String team1Name;
         String team2Name;
+        Int32 score1Goal = 0;
+        Int32 score2Goal = 0;  
 
         public soccerTracker()
         {
@@ -140,5 +142,45 @@ namespace Match_Tracker
 
         }
 
+        private void goalButton_Click(object sender, RoutedEventArgs e)
+        {
+            score1Goal++;
+            goal1.Text = score1Goal.ToString();
+        }
+
+       
+
+        private void goalButton2_Click(object sender, RoutedEventArgs e)
+        {
+            score2Goal++;
+            goal2.Text = score2Goal.ToString();
+        }
+
+       
+
+        private void goalRemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (score1Goal > 0)
+            {
+                score1Goal--;
+            }
+            goal1.Text = score1Goal.ToString();
+        }
+
+
+
+        private void goal2RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (score2Goal > 0)
+            {
+                score2Goal--;
+            }
+            goal2.Text = score2Goal.ToString();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            //save results
+        }
     }
 }

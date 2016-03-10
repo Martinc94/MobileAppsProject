@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -173,12 +174,62 @@ namespace Match_Tracker
 
         private void goalRemoveButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (score1Goal>0) { 
+            score1Goal--;
+            }
+            goal1.Text = score1Goal.ToString();
         }
 
         private void PointRemoveButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (score1Point > 0)
+            {
+                score1Point--;
+            }
+            point1.Text = score1Point.ToString();
         }
+
+        private void Point2RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (score2Point > 0)
+            {
+                score2Point--;
+            }
+            point2.Text = score2Point.ToString();
+        }
+
+        private void goal2RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (score2Goal > 0)
+            {
+                score2Goal--;
+            }
+            goal2.Text = score2Goal.ToString();
+        }
+
+        private async void initStorage(object sender, RoutedEventArgs e)
+        {
+            //save score
+            var folder = ApplicationData.Current.LocalFolder;
+            //create folder
+            var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
+            //create text file
+            var textFile = await newFolder.CreateFileAsync("results.txt");
+            await FileIO.WriteTextAsync(textFile, "Hello World!");
+        }
+
+        private async void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            //save score
+            var folder = ApplicationData.Current.LocalFolder;
+            //create folder or open
+            var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
+            //create text file or open
+            var textFile = await newFolder.CreateFileAsync("results.txt", CreationCollisionOption.OpenIfExists);
+           
+            //Append to file
+            await FileIO.AppendTextAsync(textFile, team1Name+":"+ score1Goal + ":"+ score1Point + ":" + team2Name + ":" + score2Goal + ":" + score2Point+ System.Environment.NewLine);
+        }
+
     }
 }

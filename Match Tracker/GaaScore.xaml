@@ -17,7 +17,6 @@
             <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
-
         </Grid.RowDefinitions>
 
         <Grid.Background>
@@ -25,12 +24,11 @@
         </Grid.Background>
 
         <Grid x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <TextBlock FontSize="40" FontFamily="arial">Gaa Tracker</TextBlock>
+            <TextBlock x:Name="Header" FontSize="40" FontFamily="arial">Gaa Tracker</TextBlock>
         </Grid>
 
         <Grid x:Name="Team1Grid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Left" Margin="20,50,0,0">
             <TextBlock FontSize="30" FontFamily="arial" x:Name="teamOneName" Tapped="teamOneName_Tapped">Team One</TextBlock>
-
         </Grid>
 
         <Grid x:Name="Team2Grid" Grid.Column="1" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,50,20,0">
@@ -69,7 +67,6 @@
             </Grid>
         </StackPanel>
 
-
         <StackPanel x:Name="score2" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="center" Background="White">
             <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
@@ -91,11 +88,20 @@
                 <Button x:Name="goalButton2" Grid.Column="0" Background="DarkOrange" Content="Goal" HorizontalAlignment="Left" VerticalAlignment="Top" Click="goalButton2_Click"/>
                 <Button x:Name="PointButton2" Grid.Column="2" Background="DarkOrange" Content="Point" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="PointButton2_Click" />
             </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="goal2RemoveButton" Grid.Column="0" Background="DarkOrange" Content="Remove" HorizontalAlignment="Left" VerticalAlignment="Top" Click="goal2RemoveButton_Click"/>
+                <Button x:Name="Point2RemoveButton" Grid.Column="2" Background="DarkOrange" Content="Remove" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Point2RemoveButton_Click"/>
+            </Grid>
         </StackPanel>
 
-
-        
-
+        <Grid x:Name="footerGrid" Grid.Column="0" Grid.Row="3"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Button x:Name="SaveButton" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange" Click="SaveButton_Click">Save Result</Button>
+        </Grid>
 
     </Grid>
 </Page>

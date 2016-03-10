@@ -132,19 +132,21 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[6];
             _typeNameTable[0] = "Match_Tracker.GaaScore";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "Match_Tracker.MainPage";
-            _typeNameTable[4] = "Match_Tracker.soccerTracker";
+            _typeNameTable[4] = "Match_Tracker.results";
+            _typeNameTable[5] = "Match_Tracker.soccerTracker";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[6];
             _typeTable[0] = typeof(global::Match_Tracker.GaaScore);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::Match_Tracker.MainPage);
-            _typeTable[4] = typeof(global::Match_Tracker.soccerTracker);
+            _typeTable[4] = typeof(global::Match_Tracker.results);
+            _typeTable[5] = typeof(global::Match_Tracker.soccerTracker);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -181,7 +183,8 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
 
         private object Activate_0_GaaScore() { return new global::Match_Tracker.GaaScore(); }
         private object Activate_3_MainPage() { return new global::Match_Tracker.MainPage(); }
-        private object Activate_4_soccerTracker() { return new global::Match_Tracker.soccerTracker(); }
+        private object Activate_4_results() { return new global::Match_Tracker.results(); }
+        private object Activate_5_soccerTracker() { return new global::Match_Tracker.soccerTracker(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -215,9 +218,16 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  Match_Tracker.soccerTracker
+            case 4:   //  Match_Tracker.results
                 userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_soccerTracker;
+                userType.Activator = Activate_4_results;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Match_Tracker.soccerTracker
+                userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_soccerTracker;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

@@ -8,18 +8,25 @@
     mc:Ignorable="d">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="Images/grass.jpg"></ImageBrush>
         </Grid.Background>
-        <Grid x:Name="HeaderGrid"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
-            <TextBlock FontSize="40" FontFamily="arial">Match Tracker</TextBlock>
+        <Grid x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+            <TextBlock FontSize="50" FontFamily="arial">Match Tracker</TextBlock>
         </Grid>
 
-        <StackPanel Margin="0,200,0,0">
-            <Button x:Name="gaaButton" Margin="20" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="gaaButton_Click">Gaa Tracker</Button>
-            <Button x:Name="soccerButton" Margin="20" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click">Soccer Tracker</Button>
-            <Button x:Name="savedButton" Margin="20" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click">Saved Matches</Button>
-        </StackPanel>
+
+        <Button x:Name="gaaButton" Grid.Row="1" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="gaaButton_Click">Gaa Tracker</Button>
+        <Button x:Name="soccerButton" Grid.Row="2" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click">Soccer Tracker</Button>
+        <Button x:Name="savedButton" Grid.Row="3" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="savedButton_Click">Saved Results</Button>
+        
 
         
     </Grid>

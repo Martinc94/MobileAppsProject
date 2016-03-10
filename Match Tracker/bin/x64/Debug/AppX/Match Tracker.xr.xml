@@ -39,11 +39,10 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Background" />
-      <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
       <RootEvent Name="Click" />
@@ -57,6 +56,8 @@
     </RootType>
     <RootType FullName="Match_Tracker.GaaScore" />
     <RootType FullName="Match_Tracker.MainPage" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Match_Tracker.results" />
     <RootType FullName="Match_Tracker.soccerTracker" />
   </Roots.RootTypes>
 </Roots>

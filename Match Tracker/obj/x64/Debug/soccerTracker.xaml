@@ -11,18 +11,67 @@
         <Grid.Background>
             <ImageBrush ImageSource="Images/pitch.jpg"></ImageBrush>
         </Grid.Background>
-        <Grid x:ConnectionId='1' x:Name="HeaderGrid"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="213*" />
+            <RowDefinition Height="213*" />
+            <RowDefinition Height="151*" />
+            <RowDefinition Height="63*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:ConnectionId='1' x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="46,0,45,0">
             <TextBlock FontSize="40" FontFamily="arial">Soccer Tracker</TextBlock>
         </Grid>
 
-        <Grid x:ConnectionId='2' x:Name="Team1Grid"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Left" Margin="50,50,0,0">
-            <TextBlock x:ConnectionId='5' FontSize="40" FontFamily="arial" x:Name="teamOneName"                            >Team One</TextBlock>
-
+        <Grid x:ConnectionId='2' x:Name="Team1Grid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Left" Margin="20,50,0,0">
+            <TextBlock x:ConnectionId='15' FontSize="30" FontFamily="arial" x:Name="teamOneName"                            >Team One</TextBlock>
         </Grid>
 
-        <Grid x:ConnectionId='3' x:Name="Team2Grid"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,50,50,0">
-            <TextBlock x:ConnectionId='4' FontSize="40" FontFamily="arial" x:Name="teamTwoName"                             >Team Two</TextBlock>
+        <Grid x:ConnectionId='3' x:Name="Team2Grid" Grid.Column="1" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,50,20,0">
+            <TextBlock x:ConnectionId='14' FontSize="30" FontFamily="arial" x:Name="teamTwoName"                             >Team Two</TextBlock>
         </Grid>
+
+        <StackPanel x:ConnectionId='4' x:Name="score1" Grid.Column="0" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="center" Background="White" Margin="54,14.667,53,14.667">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:ConnectionId='13' x:Name="goal1" Grid.Column="0" FontSize="90"  Text="0"></TextBlock>
+            </Grid>
+
+            <Grid>
+                <Button x:ConnectionId='12' x:Name="goalButton" Grid.Column="0" Background="DarkOrange" Content="Goal" HorizontalAlignment="Center" VerticalAlignment="Top"                         />
+            </Grid>
+            <Grid>
+                <Button x:ConnectionId='11' x:Name="goalRemoveButton" Background="DarkOrange" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Top"                               />
+            </Grid>
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='5' x:Name="score2" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="center" Background="White" Margin="54,14.667,53,14.667">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:ConnectionId='10' x:Name="goal2" Grid.Column="0" FontSize="90" Text="0" ></TextBlock>
+
+            </Grid>
+            <Button x:ConnectionId='8' x:Name="goalButton2" Background="DarkOrange" Content="Goal" HorizontalAlignment="Center" VerticalAlignment="Top"                          />
+            <Button x:ConnectionId='9' x:Name="goal2RemoveButton"  Background="DarkOrange" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Top"                                />
+
+        </StackPanel>
+
+        <Grid x:ConnectionId='6' x:Name="footerGrid" Grid.Column="0" Grid.Row="3"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Button x:ConnectionId='7' x:Name="SaveButton" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange"                         >Save Result</Button>
+        </Grid>
+
     </Grid>
 </Page>
 
