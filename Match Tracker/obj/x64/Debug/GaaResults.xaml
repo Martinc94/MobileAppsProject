@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Match_Tracker.GaaResults"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Match_Tracker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:ConnectionId='1' x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+            <TextBlock FontSize="50" FontFamily="arial">Results</TextBlock>
+        </Grid>
+        
+        <ListView x:ConnectionId='2' x:Name="ResultsListView" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Result}"/>
+                      
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
+

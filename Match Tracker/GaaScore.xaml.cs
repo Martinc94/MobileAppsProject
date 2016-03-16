@@ -19,9 +19,9 @@ namespace Match_Tracker
 {
     public sealed partial class GaaScore : Page
     {
+        //Variables
         String team1Name;
         String team2Name;
-
         Int32 score1Goal=0;
         Int32 score1Point = 0;
         Int32 score2Goal = 0;
@@ -34,7 +34,22 @@ namespace Match_Tracker
             //Sets names
             TeamNames();
         }
-           
+
+        public GaaScore(String team1Name,String team2Name,Int32 score1Goal,Int32 score1Point,Int32 score2Goal,Int32 score2Point)
+        {
+            this.InitializeComponent();
+            Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            //Init Variables
+            this.team1Name=team1Name;
+            this.team2Name= team2Name;
+            this.score1Goal = score1Goal;
+            this.score1Point = score1Point;
+            this.score2Goal = score2Goal;
+            this.score2Point = score2Point;
+        }
+
+        #region TeamNames
+
         private void teamOneName_Tapped(object sender, TappedRoutedEventArgs e)
         {        
             TeamOneName();
@@ -68,9 +83,7 @@ namespace Match_Tracker
                 team1Name = "Team One";
             }
 
-            teamOneName.Text = team1Name;
-
-            
+            teamOneName.Text = team1Name;          
         }
 
         private async void TeamTwoName()
@@ -97,8 +110,7 @@ namespace Match_Tracker
                     team2Name = "Team Two";
                 }
 
-                teamTwoName.Text = team2Name;
-           
+                teamTwoName.Text = team2Name;       
         }
 
         private async void TeamNames()
@@ -148,6 +160,9 @@ namespace Match_Tracker
 
         }
 
+        #endregion
+
+        #region Update Score Buttons
         private void goalButton_Click(object sender, RoutedEventArgs e)
         {
             score1Goal++;
@@ -206,7 +221,9 @@ namespace Match_Tracker
             }
             goal2.Text = score2Goal.ToString();
         }
+        #endregion
 
+        #region Local Storage
         private async void initStorage(object sender, RoutedEventArgs e)
         {
             //save score
@@ -230,6 +247,7 @@ namespace Match_Tracker
             //Append to file
             await FileIO.AppendTextAsync(textFile, team1Name+":"+ score1Goal + ":"+ score1Point + ":" + team2Name + ":" + score2Goal + ":" + score2Point+ System.Environment.NewLine);
         }
+        #endregion
 
     }
 }
