@@ -19,22 +19,29 @@ namespace Match_Tracker
     public sealed partial class GaaResults : Page
     {
         public List<listContent> ContentList { get; set; }
-        //possibly make result class
+
+
+        //test
+       // String str="0";
 
         public GaaResults()
         {
             this.InitializeComponent();
-            //test
+            loadResults();
+            //fillListView();
+            
+            
+        }
+
+        private void addToListView(String str){
+            
             listContent listItem = new listContent();
-            listItem.Result = "NameOne"+" VS "+"NameTwo";
+
+            listItem.Result = str;
 
             ResultsListView.Items.Add(listItem);
-           
-           /* for (int i = 0;i<50;i++) {
-                ResultsListView.Items.Add(listItem);
-            }*/
-            
             ResultsListView.DataContext = ContentList;
+
         }
 
         private async void loadResults()
@@ -46,7 +53,7 @@ namespace Match_Tracker
             {
                 //open gaa folder
                 //
-                sampleFile = await storageFolder.GetFileAsync("results.txt");
+                sampleFile = await storageFolder.GetFileAsync("gaaResults.txt");
             }
             catch (Exception myE)
             {
@@ -54,10 +61,37 @@ namespace Match_Tracker
                 return;
             }
             string fileText = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
+            
+
+            //test
+            //string str = fileText;
+
+            parseFile(fileText);
+
+            //addToListView(str);
+
+            
+
+            //Windows.UI.Popups.MessageDialog m = new Windows.UI.Popups.MessageDialog(str);
+
             //read line 
             //parse line 
             //add to list
             //output list of results
+        }
+
+        private void parseFile(String fileText)
+        {
+            //string[] res = fileText.Split('\n');
+            string[] res = fileText.Split('\n');
+          //  addToListView(res[0]);
+           // addToListView(res[1]);
+           // addToListView(res[2]);
+
+            for (int i= 0;i<res.Length;i++) {
+                String str= res[i];
+                addToListView(res[i]);
+            }
         }
 
         public class listContent
@@ -73,6 +107,12 @@ namespace Match_Tracker
             public string TeamTwoName { get; set; }
 
             //add tapped event
-        }
+
+            //split by :
+            /* for (int i = 0; i<res.Length;i++) {
+                String str = res[i];
+                addToListView(res[i]);
+            }*/
+    }
     }
 }

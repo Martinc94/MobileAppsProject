@@ -229,9 +229,9 @@ namespace Match_Tracker
             //save score
             var folder = ApplicationData.Current.LocalFolder;
             //create folder
-            var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
+            //var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
             //create text file
-            var textFile = await newFolder.CreateFileAsync("results.txt");
+            var textFile = await folder.CreateFileAsync("gaaResults.txt");
             await FileIO.WriteTextAsync(textFile, "Hello World!");
         }
 
@@ -240,9 +240,9 @@ namespace Match_Tracker
             //save score
             var folder = ApplicationData.Current.LocalFolder;
             //create folder or open
-            var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
+            //var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
             //create text file or open
-            var textFile = await newFolder.CreateFileAsync("results.txt", CreationCollisionOption.OpenIfExists);
+            var textFile = await folder.CreateFileAsync("gaaResults.txt", CreationCollisionOption.OpenIfExists);
            
             //Append to file
             await FileIO.AppendTextAsync(textFile, team1Name+":"+ score1Goal + ":"+ score1Point + ":" + team2Name + ":" + score2Goal + ":" + score2Point+ System.Environment.NewLine);
