@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,37 +21,25 @@ namespace Match_Tracker
 {
     public sealed partial class GaaResults : Page
     {
-        public List<listContent> ContentList { get; set; }
-
-        public List<Result> ResultsList;
+        //public List<Result> ResultsList;
+        public static ObservableCollection<Result> ResultsList;
 
         public GaaResults()
         {
             this.InitializeComponent();
-            loadResults();
-        }
-
-        public void addToListView(String str){
-            
-            listContent listItem = new listContent();
-            listItem.Result = str;
-            //listItem.Tap += TextBlock_Tapped;   
-            
-
-            ResultsListView.Items.Add(listItem);
-            ResultsListView.DataContext = ContentList;
+            loadResults();  
         }
 
         public void addResultToListView(Result re)
-        {
-
-            
-            ResultsListView.Items.Add(re);
-            //ResultsListView.DataContext = ContentList;
-            ResultsListView.DataContext = ResultsList;
+        {      
+            ResultsListView.Items.Add(re);      
+            ResultsListView.DataContext = ResultsList;    
         }
-
-
+       
+        public void updateListView()
+        {
+         
+        }
 
         private async void loadResults()
         {
@@ -78,42 +67,19 @@ namespace Match_Tracker
             string[] res = fileText.Split('\n');       
 
             for (int i= 0;i<res.Length-1;i++) {
-                String str= res[i];
-                //addToListView(res[i]);
+                String str= res[i];    
                 //add to result
                 Result r = new Result(str);
                 String ResStr=r.getFormattedResult();
-
-                //addToListView(ResStr);
-
                 addResultToListView(r);
             }
         }
 
-        private void OnItemTapped(object sender, TappedEventHandler e)
+        private  void ResultsListView_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            /* if (e.Item != null && this.TappedEventHandler != null && this.TappedEventHandler.CanExecute(e))
-             {
-                 this.ItemClickCommand.Execute(e.Item);
-                 this.SelectedItem = null;
-             }*/
-
-           // MessageDialog m = new MessageDialog("Tapped");
-        }
-
-        public class listContent
-        {
-            public string Result { get; set; }  
-        }
-
-       
-
-       
-
-        private static void OnItemClick(object sender, ItemClickEventArgs e)
-        {
-            MessageDialog m = new MessageDialog("Tapped");
-            
+            //updateListView();
+            //MessageDialog m = new MessageDialog("Update");
+           //await m.ShowAsync();
         }
     }
 
@@ -126,12 +92,7 @@ namespace Match_Tracker
         public string TeamTwoName;
         public string TeamTwoGoal;
         public string TeamTwoPoint;
-
-        public Result()
-        { 
-
-        }
-
+ 
         public Result(String ResultString)
         {
             //splits results
@@ -142,7 +103,7 @@ namespace Match_Tracker
             this.TeamTwoName = res[3];
             this.TeamTwoGoal = res[4];
             this.TeamTwoPoint = res[5];
-
+            
             this.result = getFormattedResult();
         }
 
@@ -152,8 +113,15 @@ namespace Match_Tracker
             return result;
         }
 
-        //add tapped event
+        //tapped event
+        public async void Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            String str = TeamOneName + " : " + TeamOneGoal + "-" + TeamOnePoint + "\n" + TeamTwoName + " : " + TeamTwoGoal + "-" + TeamTwoPoint;
 
+            MessageDialog m = new MessageDialog(str);
+            await m.ShowAsync();
+
+        }
     }
 
 

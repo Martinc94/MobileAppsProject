@@ -8,20 +8,26 @@
     xmlns:data="using:Match_Tracker"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/gaaballGoal.jpg"></ImageBrush>
+        </Grid.Background>
         <Grid x:ConnectionId='2' x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
             <TextBlock FontSize="50" FontFamily="arial">Results</TextBlock>
         </Grid>
 
-        
-        
-        
-        
-        <ListView x:ConnectionId='3' x:Name="ResultsListView" HorizontalAlignment="Center" VerticalAlignment="Center"                                   >
+
+
+
+
+        <ListView x:ConnectionId='3' x:Name="ResultsListView" HorizontalAlignment="Center" VerticalAlignment="Center"                                                                   >
             <ListView.ItemTemplate >
                 <DataTemplate                         >
-                    <StackPanel x:ConnectionId='4'>
-                        <TextBlock x:ConnectionId='5'                       />
+                    <StackPanel x:ConnectionId='4' HorizontalAlignment="Center" VerticalAlignment="Center"  Background="White">
+                        <TextBlock x:ConnectionId='5'                                                 FontSize="20" FontFamily="arial" />
+                        <Button x:Name="delItem" Background="Transparent" HorizontalAlignment="Right">
+                            <SymbolIcon Symbol="Delete"/>
+                        </Button>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

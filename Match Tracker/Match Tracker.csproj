@@ -122,6 +122,7 @@
     <None Include="Match Tracker_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\GaaBallGoal.jpg" />
     <Content Include="Images\grass.jpg" />
     <Content Include="Images\grass2.jpg" />
     <Content Include="Images\pitch.jpg" />

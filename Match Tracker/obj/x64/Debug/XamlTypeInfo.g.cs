@@ -132,31 +132,23 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "Match_Tracker.GaaResults";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "System.Collections.Generic.List`1<Match_Tracker.GaaResults.listContent>";
-            _typeNameTable[4] = "Object";
-            _typeNameTable[5] = "Match_Tracker.GaaResults.listContent";
-            _typeNameTable[6] = "String";
-            _typeNameTable[7] = "Match_Tracker.GaaScore";
-            _typeNameTable[8] = "Match_Tracker.MainPage";
-            _typeNameTable[9] = "Match_Tracker.results";
-            _typeNameTable[10] = "Match_Tracker.soccerTracker";
+            _typeNameTable[3] = "Match_Tracker.GaaScore";
+            _typeNameTable[4] = "Match_Tracker.MainPage";
+            _typeNameTable[5] = "Match_Tracker.results";
+            _typeNameTable[6] = "Match_Tracker.soccerTracker";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::Match_Tracker.GaaResults);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::System.Collections.Generic.List<global::Match_Tracker.GaaResults.listContent>);
-            _typeTable[4] = typeof(global::System.Object);
-            _typeTable[5] = typeof(global::Match_Tracker.GaaResults.listContent);
-            _typeTable[6] = typeof(global::System.String);
-            _typeTable[7] = typeof(global::Match_Tracker.GaaScore);
-            _typeTable[8] = typeof(global::Match_Tracker.MainPage);
-            _typeTable[9] = typeof(global::Match_Tracker.results);
-            _typeTable[10] = typeof(global::Match_Tracker.soccerTracker);
+            _typeTable[3] = typeof(global::Match_Tracker.GaaScore);
+            _typeTable[4] = typeof(global::Match_Tracker.MainPage);
+            _typeTable[5] = typeof(global::Match_Tracker.results);
+            _typeTable[6] = typeof(global::Match_Tracker.soccerTracker);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -192,17 +184,10 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
         }
 
         private object Activate_0_GaaResults() { return new global::Match_Tracker.GaaResults(); }
-        private object Activate_3_List() { return new global::System.Collections.Generic.List<global::Match_Tracker.GaaResults.listContent>(); }
-        private object Activate_7_GaaScore() { return new global::Match_Tracker.GaaScore(); }
-        private object Activate_8_MainPage() { return new global::Match_Tracker.MainPage(); }
-        private object Activate_9_results() { return new global::Match_Tracker.results(); }
-        private object Activate_10_soccerTracker() { return new global::Match_Tracker.soccerTracker(); }
-        private void VectorAdd_3_List(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Match_Tracker.GaaResults.listContent>)instance;
-            var newItem = (global::Match_Tracker.GaaResults.listContent)item;
-            collection.Add(newItem);
-        }
+        private object Activate_3_GaaScore() { return new global::Match_Tracker.GaaScore(); }
+        private object Activate_4_MainPage() { return new global::Match_Tracker.MainPage(); }
+        private object Activate_5_results() { return new global::Match_Tracker.results(); }
+        private object Activate_6_soccerTracker() { return new global::Match_Tracker.soccerTracker(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -217,7 +202,6 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
             case 0:   //  Match_Tracker.GaaResults
                 userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_GaaResults;
-                userType.AddMemberName("ContentList");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -230,52 +214,30 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
                 xamlType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  System.Collections.Generic.List`1<Match_Tracker.GaaResults.listContent>
-                userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_3_List;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 4:   //  Object
-                xamlType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 5:   //  Match_Tracker.GaaResults.listContent
-                userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.AddMemberName("Result");
+            case 3:   //  Match_Tracker.GaaScore
+                userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_GaaScore;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  String
-                xamlType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 7:   //  Match_Tracker.GaaScore
+            case 4:   //  Match_Tracker.MainPage
                 userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_GaaScore;
+                userType.Activator = Activate_4_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  Match_Tracker.MainPage
+            case 5:   //  Match_Tracker.results
                 userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_MainPage;
+                userType.Activator = Activate_5_results;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  Match_Tracker.results
+            case 6:   //  Match_Tracker.soccerTracker
                 userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_results;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 10:   //  Match_Tracker.soccerTracker
-                userType = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_soccerTracker;
+                userType.Activator = Activate_6_soccerTracker;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -284,47 +246,11 @@ namespace Match_Tracker.Match_Tracker_XamlTypeInfo
         }
 
 
-        private object get_0_GaaResults_ContentList(object instance)
-        {
-            var that = (global::Match_Tracker.GaaResults)instance;
-            return that.ContentList;
-        }
-        private void set_0_GaaResults_ContentList(object instance, object Value)
-        {
-            var that = (global::Match_Tracker.GaaResults)instance;
-            that.ContentList = (global::System.Collections.Generic.List<global::Match_Tracker.GaaResults.listContent>)Value;
-        }
-        private object get_1_listContent_Result(object instance)
-        {
-            var that = (global::Match_Tracker.GaaResults.listContent)instance;
-            return that.Result;
-        }
-        private void set_1_listContent_Result(object instance, object Value)
-        {
-            var that = (global::Match_Tracker.GaaResults.listContent)instance;
-            that.Result = (global::System.String)Value;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlMember xamlMember = null;
-            global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "Match_Tracker.GaaResults.ContentList":
-                userType = (global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Match_Tracker.GaaResults");
-                xamlMember = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlMember(this, "ContentList", "System.Collections.Generic.List`1<Match_Tracker.GaaResults.listContent>");
-                xamlMember.Getter = get_0_GaaResults_ContentList;
-                xamlMember.Setter = set_0_GaaResults_ContentList;
-                break;
-            case "Match_Tracker.GaaResults.listContent.Result":
-                userType = (global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Match_Tracker.GaaResults.listContent");
-                xamlMember = new global::Match_Tracker.Match_Tracker_XamlTypeInfo.XamlMember(this, "Result", "String");
-                xamlMember.Getter = get_1_listContent_Result;
-                xamlMember.Setter = set_1_listContent_Result;
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }
