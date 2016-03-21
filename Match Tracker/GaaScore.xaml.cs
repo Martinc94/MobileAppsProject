@@ -224,17 +224,7 @@ namespace Match_Tracker
         #endregion
 
         #region Local Storage
-        private async void initStorage(object sender, RoutedEventArgs e)
-        {
-            //save score
-            var folder = ApplicationData.Current.LocalFolder;
-            //create folder
-            //var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
-            //create text file
-            var textFile = await folder.CreateFileAsync("gaaResults.txt");
-            await FileIO.WriteTextAsync(textFile, "Hello World!");
-        }
-
+    
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             //save score

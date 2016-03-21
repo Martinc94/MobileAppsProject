@@ -354,6 +354,12 @@
     <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\Images\pitch.jpg">
       <PackagePath>Images\pitch.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\Images\soccer.jpg">
+      <PackagePath>Images\soccer.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\Images\soccerNet.jpg">
+      <PackagePath>Images\soccerNet.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

@@ -9,10 +9,16 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+            <Grid.Background>
             <ImageBrush ImageSource="Images/gaaballGoal.jpg"></ImageBrush>
         </Grid.Background>
-        <Grid x:ConnectionId='2' x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+        <Grid x:ConnectionId='2' x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
             <TextBlock FontSize="50" FontFamily="arial">Results</TextBlock>
         </Grid>
 
@@ -20,22 +26,21 @@
 
 
 
-        <ListView x:ConnectionId='3' x:Name="ResultsListView" HorizontalAlignment="Center" VerticalAlignment="Center"                                                                   >
+        <ListView x:ConnectionId='3' x:Name="ResultsListView" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"                                   >
             <ListView.ItemTemplate >
                 <DataTemplate                         >
-                    <StackPanel x:ConnectionId='4' HorizontalAlignment="Center" VerticalAlignment="Center"  Background="White">
-                        <TextBlock x:ConnectionId='5'                                                 FontSize="20" FontFamily="arial" />
-                        <Button x:Name="delItem" Background="Transparent" HorizontalAlignment="Right">
-                            <SymbolIcon Symbol="Delete"/>
-                        </Button>
+                    <StackPanel x:ConnectionId='6' HorizontalAlignment="Center" VerticalAlignment="Center"  Background="White">
+                        <TextBlock x:ConnectionId='7'                                                 FontSize="20" FontFamily="arial" />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-        
-        
-        
+
+
+        <Grid x:ConnectionId='4' x:Name="footerGrid" Grid.Column="0" Grid.Row="3"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Button x:ConnectionId='5' x:Name="RefreshButton" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange"                            >Refresh</Button>
+        </Grid>
+
     </Grid>
 </Page>
 

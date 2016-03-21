@@ -22,7 +22,7 @@ namespace Match_Tracker
     public sealed partial class GaaResults : Page
     {
         //public List<Result> ResultsList;
-        public static ObservableCollection<Result> ResultsList;
+        public  ObservableCollection<Result> ResultsList;
 
         public GaaResults()
         {
@@ -36,11 +36,6 @@ namespace Match_Tracker
             ResultsListView.DataContext = ResultsList;    
         }
        
-        public void updateListView()
-        {
-         
-        }
-
         private async void loadResults()
         {
             StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
@@ -75,54 +70,11 @@ namespace Match_Tracker
             }
         }
 
-        private  void ResultsListView_Tapped(object sender, TappedRoutedEventArgs e)
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
-            //updateListView();
-            //MessageDialog m = new MessageDialog("Update");
-           //await m.ShowAsync();
+            ResultsListView.Items.Clear();
+            loadResults();
         }
     }
-
-    public class Result
-    {
-        public string result { get; set; }
-        public string TeamOneName;
-        public string TeamOneGoal;
-        public string TeamOnePoint;
-        public string TeamTwoName;
-        public string TeamTwoGoal;
-        public string TeamTwoPoint;
- 
-        public Result(String ResultString)
-        {
-            //splits results
-            String[] res = ResultString.Split(':');
-            this.TeamOneName = res[0];
-            this.TeamOneGoal = res[1];
-            this.TeamOnePoint = res[2];
-            this.TeamTwoName = res[3];
-            this.TeamTwoGoal = res[4];
-            this.TeamTwoPoint = res[5];
-            
-            this.result = getFormattedResult();
-        }
-
-        public String getFormattedResult()
-        {
-            String result = TeamOneName + " : " + TeamOneGoal + "-" + TeamOnePoint + " - " + TeamTwoName + " : " + TeamTwoGoal + "-" + TeamTwoPoint;
-            return result;
-        }
-
-        //tapped event
-        public async void Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            String str = TeamOneName + " : " + TeamOneGoal + "-" + TeamOnePoint + "\n" + TeamTwoName + " : " + TeamTwoGoal + "-" + TeamTwoPoint;
-
-            MessageDialog m = new MessageDialog(str);
-            await m.ShowAsync();
-
-        }
-    }
-
 
 }
