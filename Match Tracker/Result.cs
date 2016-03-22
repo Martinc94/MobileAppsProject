@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
 namespace Match_Tracker
@@ -45,11 +47,10 @@ namespace Match_Tracker
         public async void Tapped(object sender, TappedRoutedEventArgs e)
         {
             String str = TeamOneName + " : " + TeamOneGoal + "-" + TeamOnePoint + "\n" + TeamTwoName + " : " + TeamTwoGoal + "-" + TeamTwoPoint;
-
+           
             MessageDialog md = new MessageDialog(str);
-            md.Commands.Add(new Windows.UI.Popups.UICommand("Load") { Id = 0 });
-            md.Commands.Add(new Windows.UI.Popups.UICommand("Delete") { Id = 1 });
-            md.Commands.Add(new Windows.UI.Popups.UICommand("Close") { Id = 2 });
+            md.Commands.Add(new Windows.UI.Popups.UICommand("Delete") { Id = 0 });
+            md.Commands.Add(new Windows.UI.Popups.UICommand("Close") { Id = 1 });
 
             var responce = await md.ShowAsync();
 
@@ -59,13 +60,9 @@ namespace Match_Tracker
             {
                 case 0:
                     //load
-                    Load();
-                    break;
-
-                case 1:
-                    //delete
                     Delete();
                     break;
+
 
                 default:
                     break;
@@ -73,10 +70,6 @@ namespace Match_Tracker
 
         }//endTapped
 
-        private void Load()
-        {
-            
-        }
 
         private void Delete()
         {
@@ -148,7 +141,7 @@ namespace Match_Tracker
             //loop over list
             for (int i = 0; i < reslist.Count-1; i++){
                 //Append to file
-                await FileIO.AppendTextAsync(textFile, reslist[i] + System.Environment.NewLine);
+                await FileIO.AppendTextAsync(textFile, reslist[i] + "\n");
             }                
         }
     }//end result

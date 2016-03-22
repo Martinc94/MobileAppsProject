@@ -46,6 +46,7 @@ namespace Match_Tracker
             this.score1Point = score1Point;
             this.score2Goal = score2Goal;
             this.score2Point = score2Point;
+
         }
 
         #region TeamNames

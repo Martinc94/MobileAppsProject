@@ -38,5 +38,6 @@ namespace Match_Tracker
         {
             this.Frame.Navigate(typeof(results));
         }
+
     }
 }
