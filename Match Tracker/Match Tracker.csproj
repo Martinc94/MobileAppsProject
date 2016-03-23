@@ -98,6 +98,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SoccerResults.xaml.cs">
+      <DependentUpon>SoccerResults.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GaaResults.xaml.cs">
       <DependentUpon>GaaResults.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,7 @@
     <Compile Include="results.xaml.cs">
       <DependentUpon>results.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResultsSoccer.cs" />
     <Compile Include="soccerTracker.xaml.cs">
       <DependentUpon>soccerTracker.xaml</DependentUpon>
     </Compile>
@@ -143,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="SoccerResults.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="GaaResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

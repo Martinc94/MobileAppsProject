@@ -33,7 +33,7 @@ namespace Match_Tracker
 
         private void soccerButton_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(SoccerResults));
+            this.Frame.Navigate(typeof(SoccerResults));
         }
 
         private void savedButton_Click(object sender, RoutedEventArgs e)

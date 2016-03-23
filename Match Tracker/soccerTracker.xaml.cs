@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,7 +29,7 @@ namespace Match_Tracker
             //sets names
             TeamNames();
         }
-
+        #region TeamName
         private void teamOneName_Tapped(object sender, TappedRoutedEventArgs e)
         {
             TeamOneName();
@@ -38,6 +39,7 @@ namespace Match_Tracker
         {
             TeamTwoName();
         }
+
         private async void TeamOneName()
         {
 
@@ -141,22 +143,19 @@ namespace Match_Tracker
             teamTwoName.Text = team2Name;
 
         }
-
+        #endregion
+        #region scoreUpdates
         private void goalButton_Click(object sender, RoutedEventArgs e)
         {
             score1Goal++;
             goal1.Text = score1Goal.ToString();
         }
-
        
-
         private void goalButton2_Click(object sender, RoutedEventArgs e)
         {
             score2Goal++;
             goal2.Text = score2Goal.ToString();
-        }
-
-       
+        }    
 
         private void goalRemoveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -167,8 +166,6 @@ namespace Match_Tracker
             goal1.Text = score1Goal.ToString();
         }
 
-
-
         private void goal2RemoveButton_Click(object sender, RoutedEventArgs e)
         {
             if (score2Goal > 0)
@@ -177,10 +174,24 @@ namespace Match_Tracker
             }
             goal2.Text = score2Goal.ToString();
         }
+        #endregion
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        #region Local Storage
+
+        private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            //save results
+            //save score
+            var folder = ApplicationData.Current.LocalFolder;
+            //create folder or open
+            //var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
+            //create text file or open
+            var textFile = await folder.CreateFileAsync("soccerResults.txt", CreationCollisionOption.OpenIfExists);
+
+            //Append to file
+            await FileIO.AppendTextAsync(textFile, team1Name + ":" + score1Goal + ":" + team2Name + ":" + score2Goal + System.Environment.NewLine);
         }
+        #endregion
+
+
     }
 }
