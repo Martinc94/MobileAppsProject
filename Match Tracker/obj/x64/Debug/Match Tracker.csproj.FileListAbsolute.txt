@@ -435,3 +435,8 @@ C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\obj\x64\Debug\Socc
 C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\obj\x64\Debug\SoccerResults.g.i.cs
 C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\obj\x64\Debug\SoccerResults.g.cs
 C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\bin\x64\Debug\SoccerResults.xbf
+C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\bin\x64\Debug\SoccerResults.xbf
+C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\SoccerResults.g.i.cs
+C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\SoccerResults.g.cs
+C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\SoccerResults.xaml
+C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\SoccerResults.xbf
