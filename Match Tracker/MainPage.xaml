@@ -19,13 +19,13 @@
             <ImageBrush ImageSource="Images/grass.jpg"></ImageBrush>
         </Grid.Background>
         <Grid x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
-            <TextBlock FontSize="50" FontFamily="arial">Match Tracker</TextBlock>
+            <TextBlock x:Uid="lblHeader" Text="title" FontSize="50" FontFamily="arial"></TextBlock>
         </Grid>
 
 
-        <Button x:Name="gaaButton" Grid.Row="1" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="gaaButton_Click">Gaa Tracker</Button>
-        <Button x:Name="soccerButton" Grid.Row="2" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click">Soccer Tracker</Button>
-        <Button x:Name="savedButton" Grid.Row="3" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="savedButton_Click">Saved Results</Button>
+        <Button x:Name="gaaButton" x:Uid="btnGaa" Grid.Row="1" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="gaaButton_Click">btnGaa</Button>
+        <Button x:Name="soccerButton" x:Uid="btnSoccer" Grid.Row="2" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click">btnSoccer</Button>
+        <Button x:Name="savedButton" x:Uid="btnResults" Grid.Row="3" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="savedButton_Click">btnResults</Button>
         
 
         

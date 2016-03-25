@@ -24,7 +24,7 @@
         </Grid.Background>
 
         <Grid x:ConnectionId='1' x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <TextBlock x:ConnectionId='24' x:Name="Header" FontSize="40" FontFamily="arial">Gaa Tracker</TextBlock>
+            <TextBlock x:ConnectionId='24' x:Uid="lblGaa" x:Name="Header" FontSize="40" FontFamily="arial">title</TextBlock>
         </Grid>
 
         <Grid x:ConnectionId='2' x:Name="Team1Grid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Left" Margin="20,50,0,0">
