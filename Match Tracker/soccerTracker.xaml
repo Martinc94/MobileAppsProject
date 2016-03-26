@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
 
         <Grid x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <TextBlock FontSize="40" FontFamily="arial">Soccer Tracker</TextBlock>
+            <TextBlock x:Uid="lblSoccer" FontSize="40" FontFamily="arial" Text="title"></TextBlock>
         </Grid>
 
         <Grid x:Name="Team1Grid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Left" Margin="20,50,0,0">
@@ -46,10 +46,10 @@
             </Grid>
 
             <Grid>
-                <Button x:Name="goalButton" Grid.Column="0" Background="DarkOrange" Content="Goal" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goalButton_Click"/>
+                <Button x:Name="goalButton" x:Uid="btnGoal" Grid.Column="0" Background="DarkOrange" Content="btnGoal" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goalButton_Click"/>
             </Grid>
             <Grid>
-                <Button x:Name="goalRemoveButton" Background="DarkOrange" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goalRemoveButton_Click"/>
+                <Button x:Name="goalRemoveButton"  x:Uid="btnRemove" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goalRemoveButton_Click"/>
             </Grid>
         </StackPanel>
 
@@ -63,13 +63,13 @@
                 <TextBlock x:Name="goal2" Grid.Column="0" FontSize="90" Text="0" ></TextBlock>
 
             </Grid>
-            <Button x:Name="goalButton2" Background="DarkOrange" Content="Goal" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goalButton2_Click"/>
-            <Button x:Name="goal2RemoveButton"  Background="DarkOrange" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goal2RemoveButton_Click"/>
+            <Button x:Name="goalButton2"  x:Uid="btnGoal" Background="DarkOrange" Content="brnGoal" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goalButton2_Click"/>
+            <Button x:Name="goal2RemoveButton"  x:Uid="btnRemove" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Center" VerticalAlignment="Top" Click="goal2RemoveButton_Click"/>
 
         </StackPanel>
 
         <Grid x:Name="footerGrid" Grid.Column="0" Grid.Row="3"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <Button x:Name="SaveButton" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange" Click="SaveButton_Click">Save Result</Button>
+            <Button x:Name="SaveButton"  x:Uid="btnSave" Grid.Row="2" Content="btnSave" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange" Click="SaveButton_Click"></Button>
         </Grid>
 
     </Grid>

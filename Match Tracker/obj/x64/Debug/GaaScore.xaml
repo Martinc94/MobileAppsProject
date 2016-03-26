@@ -18,23 +18,18 @@
             <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
-
         <Grid.Background>
             <ImageBrush ImageSource="Images/grass2.jpg"></ImageBrush>
         </Grid.Background>
-
         <Grid x:ConnectionId='1' x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2">
             <TextBlock x:ConnectionId='24' x:Uid="lblGaa" x:Name="Header" FontSize="40" FontFamily="arial">title</TextBlock>
         </Grid>
-
         <Grid x:ConnectionId='2' x:Name="Team1Grid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Left" Margin="20,50,0,0">
             <TextBlock x:ConnectionId='23' FontSize="30" FontFamily="arial" x:Name="teamOneName"                            >Team One</TextBlock>
         </Grid>
-
         <Grid x:ConnectionId='3' x:Name="Team2Grid" Grid.Column="1" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,50,20,0">
             <TextBlock x:ConnectionId='22' FontSize="30" FontFamily="arial" x:Name="teamTwoName"                             >Team Two</TextBlock>
         </Grid>
-
         <StackPanel x:ConnectionId='4' x:Name="score1" Grid.Column="0" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="center" Background="White">
             <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
@@ -46,15 +41,14 @@
                 <TextBlock x:ConnectionId='20' x:Name="seperator" Grid.Column="1" FontSize="90"  >-</TextBlock>
                 <TextBlock x:ConnectionId='21' x:Name="point1" Grid.Column="2" FontSize="90"  Text="0"></TextBlock>
             </Grid>
-
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='17' x:Name="goalButton" Grid.Column="0" Background="DarkOrange" Content="Goal" HorizontalAlignment="Left" VerticalAlignment="Top"                         />
-                <Button x:ConnectionId='18' x:Name="PointButton" Grid.Column="2" Background="DarkOrange" Content="Point" HorizontalAlignment="Left"  VerticalAlignment="Top"                          />
+                <Button x:ConnectionId='17' x:Name="goalButton" x:Uid="BtnGoal" Grid.Column="0" Background="DarkOrange" Content="btnGoal" HorizontalAlignment="Left" VerticalAlignment="Top"                         />
+                <Button x:ConnectionId='18' x:Name="PointButton" x:Uid="BtnPoint" Grid.Column="2" Background="DarkOrange" Content="btnPoint" HorizontalAlignment="Left"  VerticalAlignment="Top"                          />
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -62,11 +56,10 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='15' x:Name="goalRemoveButton" Grid.Column="0" Background="DarkOrange" Content="Remove" HorizontalAlignment="Left" VerticalAlignment="Top"                               />
-                <Button x:ConnectionId='16' x:Name="PointRemoveButton" Grid.Column="2" Background="DarkOrange" Content="Remove" HorizontalAlignment="Left"  VerticalAlignment="Top"                                />
+                <Button x:ConnectionId='15' x:Name="goalRemoveButton" x:Uid="BtnRemove" Grid.Column="0" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Left" VerticalAlignment="Top"                               />
+                <Button x:ConnectionId='16' x:Name="PointRemoveButton" x:Uid="BtnRemove" Grid.Column="2" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Left"  VerticalAlignment="Top"                                />
             </Grid>
         </StackPanel>
-
         <StackPanel x:ConnectionId='5' x:Name="score2" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="center" Background="White">
             <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
@@ -78,15 +71,14 @@
                 <TextBlock x:ConnectionId='13' x:Name="seperator2" Grid.Column="1" FontSize="90"  >-</TextBlock>
                 <TextBlock x:ConnectionId='14' x:Name="point2" Grid.Column="2" FontSize="90"  Text="0"></TextBlock>
             </Grid>
-
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='10' x:Name="goalButton2" Grid.Column="0" Background="DarkOrange" Content="Goal" HorizontalAlignment="Left" VerticalAlignment="Top"                          />
-                <Button x:ConnectionId='11' x:Name="PointButton2" Grid.Column="2" Background="DarkOrange" Content="Point" HorizontalAlignment="Left"  VerticalAlignment="Top"                            />
+                <Button x:ConnectionId='10' x:Name="goalButton2" x:Uid="BtnGoal" Grid.Column="0" Background="DarkOrange" Content="btnGoal" HorizontalAlignment="Left" VerticalAlignment="Top"                          />
+                <Button x:ConnectionId='11' x:Name="PointButton2" x:Uid="BtnPoint" Grid.Column="2" Background="DarkOrange" Content="btnPoint" HorizontalAlignment="Left"  VerticalAlignment="Top"                            />
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -94,15 +86,13 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='8' x:Name="goal2RemoveButton" Grid.Column="0" Background="DarkOrange" Content="Remove" HorizontalAlignment="Left" VerticalAlignment="Top"                                />
-                <Button x:ConnectionId='9' x:Name="Point2RemoveButton" Grid.Column="2" Background="DarkOrange" Content="Remove" HorizontalAlignment="Left"  VerticalAlignment="Top"                                 />
+                <Button x:ConnectionId='8' x:Name="goal2RemoveButton" x:Uid="BtnRemove" Grid.Column="0" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Left" VerticalAlignment="Top"                                />
+                <Button x:ConnectionId='9' x:Name="Point2RemoveButton" x:Uid="BtnRemove" Grid.Column="2" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Left"  VerticalAlignment="Top"                                 />
             </Grid>
         </StackPanel>
-
         <Grid x:ConnectionId='6' x:Name="footerGrid" Grid.Column="0" Grid.Row="3"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <Button x:ConnectionId='7' x:Name="SaveButton" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange"                         >Save Result</Button>
+            <Button x:ConnectionId='7' x:Name="SaveButton" x:Uid="BtnSave" Grid.Row="2" HorizontalAlignment="Center" Content="btnSave" VerticalAlignment="Center" Background="DarkOrange"                         ></Button>
         </Grid>
-
     </Grid>
 </Page>
 

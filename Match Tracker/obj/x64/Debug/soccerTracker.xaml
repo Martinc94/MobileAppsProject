@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
 
         <Grid x:ConnectionId='1' x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <TextBlock FontSize="40" FontFamily="arial">Soccer Tracker</TextBlock>
+            <TextBlock x:Uid="lblSoccer" FontSize="40" FontFamily="arial" Text="title"></TextBlock>
         </Grid>
 
         <Grid x:ConnectionId='2' x:Name="Team1Grid" Grid.Column="0" Grid.Row="0"  Background="GhostWhite" VerticalAlignment="top" HorizontalAlignment="Left" Margin="20,50,0,0">
@@ -46,10 +46,10 @@
             </Grid>
 
             <Grid>
-                <Button x:ConnectionId='12' x:Name="goalButton" Grid.Column="0" Background="DarkOrange" Content="Goal" HorizontalAlignment="Center" VerticalAlignment="Top"                         />
+                <Button x:ConnectionId='12' x:Name="goalButton" x:Uid="btnGoal" Grid.Column="0" Background="DarkOrange" Content="btnGoal" HorizontalAlignment="Center" VerticalAlignment="Top"                         />
             </Grid>
             <Grid>
-                <Button x:ConnectionId='11' x:Name="goalRemoveButton" Background="DarkOrange" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Top"                               />
+                <Button x:ConnectionId='11' x:Name="goalRemoveButton"  x:Uid="btnRemove" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Center" VerticalAlignment="Top"                               />
             </Grid>
         </StackPanel>
 
@@ -63,13 +63,13 @@
                 <TextBlock x:ConnectionId='10' x:Name="goal2" Grid.Column="0" FontSize="90" Text="0" ></TextBlock>
 
             </Grid>
-            <Button x:ConnectionId='8' x:Name="goalButton2" Background="DarkOrange" Content="Goal" HorizontalAlignment="Center" VerticalAlignment="Top"                          />
-            <Button x:ConnectionId='9' x:Name="goal2RemoveButton"  Background="DarkOrange" Content="Remove" HorizontalAlignment="Center" VerticalAlignment="Top"                                />
+            <Button x:ConnectionId='8' x:Name="goalButton2"  x:Uid="btnGoal" Background="DarkOrange" Content="brnGoal" HorizontalAlignment="Center" VerticalAlignment="Top"                          />
+            <Button x:ConnectionId='9' x:Name="goal2RemoveButton"  x:Uid="btnRemove" Background="DarkOrange" Content="btnRemove" HorizontalAlignment="Center" VerticalAlignment="Top"                                />
 
         </StackPanel>
 
         <Grid x:ConnectionId='6' x:Name="footerGrid" Grid.Column="0" Grid.Row="3"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <Button x:ConnectionId='7' x:Name="SaveButton" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange"                         >Save Result</Button>
+            <Button x:ConnectionId='7' x:Name="SaveButton"  x:Uid="btnSave" Grid.Row="2" Content="btnSave" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange"                         ></Button>
         </Grid>
 
     </Grid>

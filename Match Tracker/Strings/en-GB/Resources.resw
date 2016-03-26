@@ -120,8 +120,20 @@
   <data name="btnGaa.Content" xml:space="preserve">
     <value>Gaa Tracker</value>
   </data>
+  <data name="BtnGoal.Content" xml:space="preserve">
+    <value>Goal</value>
+  </data>
+  <data name="BtnPoint.Content" xml:space="preserve">
+    <value>Point</value>
+  </data>
+  <data name="BtnRemove.Content" xml:space="preserve">
+    <value>Remove</value>
+  </data>
   <data name="btnResults.Content" xml:space="preserve">
     <value>Saved Results</value>
+  </data>
+  <data name="BtnSave.Content" xml:space="preserve">
+    <value>Save Result</value>
   </data>
   <data name="btnSoccer.Content" xml:space="preserve">
     <value>Soccer Tracker</value>
@@ -131,5 +143,8 @@
   </data>
   <data name="lblHeader.Text" xml:space="preserve">
     <value>Match Tracker</value>
+  </data>
+  <data name="lblSoccer.Text" xml:space="preserve">
+    <value>Soccer Tracker</value>
   </data>
 </root>
