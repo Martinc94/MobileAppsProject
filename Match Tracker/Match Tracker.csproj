@@ -99,6 +99,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="seat.cs" />
     <Compile Include="seatLocation.xaml.cs">
       <DependentUpon>seatLocation.xaml</DependentUpon>
     </Compile>

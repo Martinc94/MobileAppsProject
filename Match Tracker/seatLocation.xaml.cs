@@ -13,18 +13,29 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace Match_Tracker
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class seatLocation : Page
     {
         public seatLocation()
         {
             this.InitializeComponent();
+            //setup geo
         }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            string sName = txtStad.Text;
+            string coords = txtCoordinates.Text;
+
+            //split coords
+
+            //save to file
+
+            //refresh list view
+
+        }
+
+       
     }
 }

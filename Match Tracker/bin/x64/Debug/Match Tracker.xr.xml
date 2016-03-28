@@ -51,6 +51,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
