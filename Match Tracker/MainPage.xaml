@@ -26,6 +26,7 @@
         <Button x:Name="gaaButton" x:Uid="btnGaa" Grid.Row="1" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="gaaButton_Click">btnGaa</Button>
         <Button x:Name="soccerButton" x:Uid="btnSoccer" Grid.Row="2" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click">btnSoccer</Button>
         <Button x:Name="savedButton" x:Uid="btnResults" Grid.Row="3" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="savedButton_Click">btnResults</Button>
+        <Button x:Name="seatButton" x:Uid="btnSeat" Grid.Row="4" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="seatButton_Click">btnSeat</Button>
         
 
         

@@ -147,4 +147,10 @@
   <data name="lblSoccer.Text" xml:space="preserve">
     <value>Soccer Tracker</value>
   </data>
+  <data name="btnSeat.Content" xml:space="preserve">
+    <value>Seat Location</value>
+  </data>
+  <data name="lblseatHeader.Text" xml:space="preserve">
+    <value>Seat Locations</value>
+  </data>
 </root>

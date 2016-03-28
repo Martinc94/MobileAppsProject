@@ -26,6 +26,7 @@
         <Button x:ConnectionId='2' x:Name="gaaButton" x:Uid="btnGaa" Grid.Row="1" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center"                        >btnGaa</Button>
         <Button x:ConnectionId='3' x:Name="soccerButton" x:Uid="btnSoccer" Grid.Row="2" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center"                           >btnSoccer</Button>
         <Button x:ConnectionId='4' x:Name="savedButton" x:Uid="btnResults" Grid.Row="3" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center"                          >btnResults</Button>
+        <Button x:ConnectionId='5' x:Name="seatButton" x:Uid="btnSeat" Grid.Row="4" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center"                         >btnSeat</Button>
         
 
         

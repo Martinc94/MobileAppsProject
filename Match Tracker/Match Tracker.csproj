@@ -99,6 +99,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="seatLocation.xaml.cs">
+      <DependentUpon>seatLocation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SoccerResults.xaml.cs">
       <DependentUpon>SoccerResults.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,7 @@
     <Content Include="Images\grass.jpg" />
     <Content Include="Images\grass2.jpg" />
     <Content Include="Images\pitch.jpg" />
+    <Content Include="Images\seats.jpg" />
     <Content Include="Images\soccer.jpg" />
     <Content Include="Images\soccerNet.jpg" />
     <Content Include="Properties\Default.rd.xml" />
@@ -166,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="seatLocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SoccerResults.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

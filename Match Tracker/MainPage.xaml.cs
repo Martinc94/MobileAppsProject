@@ -39,5 +39,10 @@ namespace Match_Tracker
             this.Frame.Navigate(typeof(results));
         }
 
+        private void seatButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(seatLocation));
+        }
+
     }
 }
