@@ -45,6 +45,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Inlines" />
       <RootEvent Name="Tapped" />
     </RootType>

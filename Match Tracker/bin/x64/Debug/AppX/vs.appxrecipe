@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>9a47cdb0-a4ae-4243-928c-7866580b90e6</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>4307EDB41648787783AADA3BBF4D581D808CD65A99504A83006A21CDCF89B2E8</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>581B1E2DEF1FA89D662DF30EBDF2D6F14CB4D178ACED82CDA2F0426600515C4C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>MatchTracker_1.0.0.0_x64__yvtnt47hmnjdr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>MatchTracker_yvtnt47hmnjdr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>MatchTracker</RegisteredPackageID>
@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-03-28T21:01:48.935</Modified>
+      <Modified>2016-03-29T19:57:24.484</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\bin\x64\Debug\Match Tracker.exe">
       <PackagePath>entrypoint\Match Tracker.exe</PackagePath>
-      <Modified>2016-03-28T21:01:46.738</Modified>
+      <Modified>2016-03-29T19:57:23.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MartinColeman\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -616,7 +616,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\bin\x64\Debug\Match Tracker.xr.xml">
       <PackagePath>Match Tracker.xr.xml</PackagePath>
-      <Modified>2016-03-28T21:01:46.398</Modified>
+      <Modified>2016-03-29T19:49:02.791</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -624,11 +624,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-03-28T21:01:48.517</Modified>
+      <Modified>2016-03-29T19:55:15.968</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\bin\x64\Debug\Core\Match Tracker.exe">
       <PackagePath>Match Tracker.exe</PackagePath>
-      <Modified>2016-03-28T21:01:48.933</Modified>
+      <Modified>2016-03-29T19:57:24.482</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -153,4 +153,25 @@
   <data name="lblseatHeader.Text" xml:space="preserve">
     <value>Seat Locations</value>
   </data>
+  <data name="btnRefresh.Content" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="btnSaveSeat.Content" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="lblCoor.Text" xml:space="preserve">
+    <value>Coordinates: </value>
+  </data>
+  <data name="lblResults.Text" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="lblResultsGaa.Content" xml:space="preserve">
+    <value>Gaa Results</value>
+  </data>
+  <data name="lblResultsSoccer.Content" xml:space="preserve">
+    <value>Soccer Results</value>
+  </data>
+  <data name="lblStadium.Text" xml:space="preserve">
+    <value>Enter stadium name:</value>
+  </data>
 </root>

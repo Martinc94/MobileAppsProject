@@ -19,9 +19,19 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
-        <Grid x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
-            <TextBlock x:Uid="lblseatHeader" Text="title" FontSize="50" FontFamily="arial"></TextBlock>
-        </Grid>
+        <StackPanel>
+            <Grid x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <TextBlock x:Uid="lblseatHeader" Text="title" FontSize="50" FontFamily="arial"></TextBlock>
+            </Grid>
+            <Grid Background="GhostWhite">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="GPS Status:" ></TextBlock>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Center" x:Name="statusUpdates" Text="Initialising" ></TextBlock>
+            </Grid>
+        </StackPanel>
 
         <StackPanel Grid.Row="1">
             <Grid Grid.Row="1"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
@@ -35,28 +45,24 @@
             </Grid.RowDefinitions>
 
             <Grid Background="GhostWhite" Grid.Column="0" Grid.Row="0">
-                <TextBlock Text="Enter stadium name:"></TextBlock>
+                <TextBlock x:Uid="lblStadium" Text="lblStadium"></TextBlock>
              </Grid>
             <TextBox x:Name="txtStad" Grid.Column="1" Grid.Row="0" Background="White" Height="32" Margin="0.333,0,0,0" VerticalAlignment="Top"></TextBox>
 
             <Grid Background="GhostWhite" Grid.Column="0" Grid.Row="1">
-                <TextBlock Text="Coordinates:"></TextBlock>
+                    <TextBlock x:Uid="lblCoor" Text="lblCoor"></TextBlock>
             </Grid>
             <Grid Background="GhostWhite" Grid.Column="1" Grid.Row="1">
-                <TextBlock x:Name="txtCoordinates" Text="Initialising"></TextBlock>
+                <TextBlock x:Name="txtCoordinates" Text="Unknown" Height="20" VerticalAlignment="Top"></TextBlock>
             </Grid>
         </Grid>
-            <Button Content="Save" HorizontalAlignment="Center" Visibility="Visible" Background="DarkOrange" Margin="0,5,0,0" Click="SaveButton_Click"></Button>
+            <Button x:Uid="btnSaveSeat" Content="btnSave" HorizontalAlignment="Center" Visibility="Visible" Background="DarkOrange" Margin="0,5,0,0" Click="SaveButton_Click"></Button>
         </StackPanel>
 
         <ListView x:Name="SeatListView" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            
-                
-                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Background="White">
-                        <TextBlock Text="Seat Data"  FontSize="20" FontFamily="arial" />
-                    </StackPanel>
-                
-            
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Background="White">
+                <TextBlock Text="Seat Data"  FontSize="20" FontFamily="arial" />
+            </StackPanel>
         </ListView>
 
 

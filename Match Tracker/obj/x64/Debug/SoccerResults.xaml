@@ -19,7 +19,7 @@
             <ImageBrush ImageSource="Images/soccer.jpg"></ImageBrush>
         </Grid.Background>
         <Grid x:ConnectionId='2' x:Name="HeaderGrid" Grid.Column="0" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
-            <TextBlock FontSize="50" FontFamily="arial">Results</TextBlock>
+            <TextBlock x:Uid="lblResults" FontSize="50" FontFamily="arial" Text="lblResults"></TextBlock>
         </Grid>
 
 
@@ -38,7 +38,7 @@
 
 
         <Grid x:ConnectionId='4' x:Name="footerGrid" Grid.Column="0" Grid.Row="3"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <Button x:ConnectionId='5' x:Name="RefreshButton" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange"                            >Refresh</Button>
+            <Button x:ConnectionId='5' x:Name="RefreshButton" x:Uid="btnRefresh" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange"                             Content="btnRefresh"></Button>
         </Grid>
 
     </Grid>

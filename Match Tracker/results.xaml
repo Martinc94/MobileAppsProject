@@ -18,9 +18,9 @@
             <ImageBrush ImageSource="Images/soccerNet.jpg"></ImageBrush>
         </Grid.Background>
         <Grid x:Name="HeaderGrid" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
-            <TextBlock FontSize="50" FontFamily="arial">Results</TextBlock>
+            <TextBlock x:Uid="lblResults" FontSize="50" FontFamily="arial" Text="lblResults"></TextBlock>
         </Grid>
-        <Button x:Name="gaaButton" Grid.Row="1" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="gaaButton_Click">Gaa Results</Button>
-        <Button x:Name="soccerButton" Grid.Row="2" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click">Soccer Results</Button>
+        <Button x:Name="gaaButton" x:Uid="lblResultsGaa" Grid.Row="1" Background="DarkOrange" FontSize="40" FontFamily="arial"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="gaaButton_Click" Content="btnGaaRes"></Button>
+        <Button x:Name="soccerButton" x:Uid="lblResultsSoccer" Grid.Row="2" Background="DarkOrange" FontSize="40" FontFamily="arial" VerticalAlignment="Center" HorizontalAlignment="Center" Click="soccerButton_Click" Content="btnSocRes"></Button>
     </Grid>
 </Page>
