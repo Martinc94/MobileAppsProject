@@ -174,4 +174,7 @@
   <data name="lblStadium.Text" xml:space="preserve">
     <value>Enter stadium name:</value>
   </data>
+  <data name="lblStatus.Text" xml:space="preserve">
+    <value>GPS Status:</value>
+  </data>
 </root>

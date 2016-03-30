@@ -5,6 +5,7 @@
     xmlns:local="using:Match_Tracker"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:Match_Tracker"
     mc:Ignorable="d">
 
     <Grid>
@@ -28,8 +29,11 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="GPS Status:" ></TextBlock>
+                <TextBlock x:Uid="lblStatus" Grid.Column="0" HorizontalAlignment="Center" Text="lblStatus" ></TextBlock>
                 <TextBlock Grid.Column="1" HorizontalAlignment="Center" x:Name="statusUpdates" Text="Initialising" ></TextBlock>
+            </Grid>
+            <Grid Background="GhostWhite">
+                <TextBlock HorizontalAlignment="Center" Text="Have you ever Sat in this seat before?" ></TextBlock>
             </Grid>
         </StackPanel>
 
@@ -59,12 +63,19 @@
             <Button x:Uid="btnSaveSeat" Content="btnSave" HorizontalAlignment="Center" Visibility="Visible" Background="DarkOrange" Margin="0,5,0,0" Click="SaveButton_Click"></Button>
         </StackPanel>
 
-        <ListView x:Name="SeatListView" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Background="White">
-                <TextBlock Text="Seat Data"  FontSize="20" FontFamily="arial" />
-            </StackPanel>
+        <ListView x:Name="SeatListView" Grid.Row="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{x:Bind SeatList}">
+            <ListView.ItemTemplate >
+                <DataTemplate x:DataType="data:Seat">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Background="White">
+                    <TextBlock Text="{x:Bind seatInfo}" Tapped="{x:Bind Tapped}" FontSize="20" FontFamily="arial" />
+                </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
 
+        <Grid x:Name="footerGrid" Grid.Column="0" Grid.Row="4"  Background="GhostWhite" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Button x:Name="RefreshButton" x:Uid="btnRefresh" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkOrange" Click="RefreshButton_Click" Content="btnRefresh"></Button>
+        </Grid>
 
 
     </Grid>

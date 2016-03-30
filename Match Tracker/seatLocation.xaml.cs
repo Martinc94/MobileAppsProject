@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,15 +24,19 @@ namespace Match_Tracker
     {
         Geolocator myGeo;
         uint _desiredAccuracy = 1;
+        string sName;
         String lon;
         String lat;
         bool ready=false;
+
+        public ObservableCollection<Seat> SeatList;
 
         public seatLocation()
         {
             this.InitializeComponent();
             //setup geo
             setupGeoLocation();
+            loadResults();
         }
 
         private async void setupGeoLocation()
@@ -117,24 +122,56 @@ namespace Match_Tracker
 
         }
 
-
-
-
-
-
-        private void loadResults()
+        private async void loadResults()
         {
-            
+            StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
+            // create the file and append
+            StorageFile sampleFile;
+            try
+            {
+                //get results
+                sampleFile = await storageFolder.GetFileAsync("seatCoord.txt");
+            }
+            catch (Exception myE)
+            {
+                string message = myE.Message;
+                return;
+            }
+            string fileText = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
+
+            parseFile(fileText);
+        }
+
+        private void parseFile(String fileText)
+        {
+            //splits up all results
+            string[] res = fileText.Split('\n');
+
+            for (int i = 0; i < res.Length - 1; i++)
+            {
+                String str = res[i];
+                //add to result
+                Seat s = new Seat(str);
+                String ResStr = s.getFormatted();
+                addSeatToListView(s);
+            }
+        }
+
+        private void addSeatToListView(Seat s)
+        {
+            SeatListView.Items.Add(s);
+            SeatListView.DataContext = SeatList;
         }
 
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string sName = txtStad.Text;
-            //string coords = txtCoordinates.Text;
+            sName = txtStad.Text;
 
+            if (sName=="") {
+                sName = "unnamed";
+            }
 
-            if (ready)
-            {
+            if (ready) {
                 //Append to file
                 var folder = ApplicationData.Current.LocalFolder;
                 var textFile = await folder.CreateFileAsync("seatCoord.txt", CreationCollisionOption.OpenIfExists);
@@ -143,8 +180,7 @@ namespace Match_Tracker
             }
 
             //refresh list view
-            //Refresh();
-
+            Refresh();
         }
 
         private void Refresh()
@@ -159,6 +195,5 @@ namespace Match_Tracker
             loadResults();
         }
 
-        
     }
 }
