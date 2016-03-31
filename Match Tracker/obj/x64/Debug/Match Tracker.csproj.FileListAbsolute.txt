@@ -445,3 +445,8 @@ C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\
 C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\seatLocation.xaml
 C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\seatLocation.xbf
 C:\Users\MartinColeman\Documents\GitHub\MobileAppsProject\Match Tracker\obj\x64\Debug\Match Tracker.csprojResolveAssemblyReference.cache
+C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\bin\x64\Debug\seatLocation.xbf
+C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\obj\x64\Debug\seatLocation.g.i.cs
+C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\obj\x64\Debug\seatLocation.g.cs
+C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\obj\x64\Debug\seatLocation.xaml
+C:\Users\Martinc\Source\Repos\MobileAppsProject\Match Tracker\obj\x64\Debug\seatLocation.xbf

@@ -19,6 +19,8 @@
   </Dependencies>
   <Resources>
     <Resource Language="EN-GB" />
+    <Resource Language="EN-US" />
+    <Resource Language="GA" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Match Tracker.exe" EntryPoint="Match_Tracker.App">
