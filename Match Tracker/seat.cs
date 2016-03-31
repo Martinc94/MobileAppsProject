@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Input;
@@ -53,10 +50,9 @@ namespace Match_Tracker
             switch (switch_on)
             {
                 case 0:
-                    //load
+                    //delete result
                     Delete();
                     break;
-
 
                 default:
                     break;
@@ -66,8 +62,7 @@ namespace Match_Tracker
 
         private async void Delete()
         {
-            StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-            // create the file and append
+            StorageFolder storageFolder = ApplicationData.Current.LocalFolder;  
             StorageFile sampleFile;
             try
             {
@@ -95,21 +90,10 @@ namespace Match_Tracker
                 if (list[i] == originalString)
                 {
                     //found Result
-                    //delete from res
+                    //delete from list
                     list.RemoveAt(i);
                 }
-            }
-
-            for (int i = 0; i < list.Count - 1; i++)
-            {
-
-                if (list[i] == originalString)
-                {
-                    //found seat and remove   
-                    list.RemoveAt(i);
-                }
-            }
-
+            } 
             //append to file
             Append(list);
         }

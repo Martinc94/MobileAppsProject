@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Popups;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
 namespace Match_Tracker
@@ -59,10 +54,8 @@ namespace Match_Tracker
             switch (switch_on)
             {
                 case 0:
-                    //load
                     Delete();
                     break;
-
 
                 default:
                     break;
@@ -107,23 +100,10 @@ namespace Match_Tracker
                 if (reslist[i] == originalString)
                 {
                     //found Result
-                    //delete from res
+                    //delete from resultList
                     reslist.RemoveAt(i);
                 }
             }
-
-            for (int i = 0; i < reslist.Count - 1; i++)
-            {
-               
-                if (reslist[i] == originalString )
-                {
-                    //found Result
-                    //delete from res
-                    reslist.RemoveAt(i);
-                              
-                }               
-            }
-
             //append to file
             Append(reslist);
 

@@ -1,22 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 namespace Match_Tracker
 {
@@ -49,14 +38,11 @@ namespace Match_Tracker
                     {
                         myGeo = new Geolocator { DesiredAccuracyInMeters = _desiredAccuracy };
                         myGeo.ReportInterval = (uint)5000;
-                        // set up the events
-                        // status changed, position changed
+                        // status changed, position changed events
                         myGeo.StatusChanged += MyGeo_StatusChanged;
                         myGeo.PositionChanged += MyGeo_PositionChanged;
                         // get our current position.
-                        Geoposition pos = await myGeo.GetGeopositionAsync();
-                       // updateMainPage(pos);
-
+                        Geoposition pos = await myGeo.GetGeopositionAsync();        
                         break;
                     }
                 case GeolocationAccessStatus.Denied:
@@ -125,7 +111,6 @@ namespace Match_Tracker
         private async void loadResults()
         {
             StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-            // create the file and append
             StorageFile sampleFile;
             try
             {

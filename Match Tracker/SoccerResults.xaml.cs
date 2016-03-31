@@ -21,7 +21,6 @@ namespace Match_Tracker
 {
     public sealed partial class SoccerResults : Page
     {
-        //public List<ResultsSoccer> ResultsList;
         public ObservableCollection<ResultsSoccer> ResultsList;
 
         public SoccerResults()
@@ -39,7 +38,6 @@ namespace Match_Tracker
         private async void loadResults()
         {
             StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-            // create the file and append
             StorageFile sampleFile;
             try
             {

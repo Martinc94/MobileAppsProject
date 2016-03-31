@@ -48,11 +48,9 @@ namespace Match_Tracker
 
             switch (switch_on)
             {
-                case 0:
-                    //load
+                case 0: 
                     Delete();
                     break;
-
 
                 default:
                     break;
@@ -97,26 +95,12 @@ namespace Match_Tracker
                 if (reslist[i] == originalString)
                 {
                     //found Result
-                    //delete from res
+                    //delete from resultList
                     reslist.RemoveAt(i);
                 }
             }
-
-            for (int i = 0; i < reslist.Count - 1; i++)
-            {
-
-                if (reslist[i] == originalString)
-                {
-                    //found Result
-                    //delete from res
-                    reslist.RemoveAt(i);
-
-                }
-            }
-
             //append to file
             Append(reslist);
-
         }
 
         private async void Append(List<string> reslist)

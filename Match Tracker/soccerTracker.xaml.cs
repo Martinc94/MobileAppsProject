@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 namespace Match_Tracker
 {
@@ -26,7 +16,7 @@ namespace Match_Tracker
         public soccerTracker()
         {
             this.InitializeComponent();
-            //sets names
+            //sets names on load
             TeamNames();
         }
         #region TeamName
@@ -71,7 +61,6 @@ namespace Match_Tracker
 
         private async void TeamTwoName()
         {
-
             TextBox txtName = new TextBox();
             Grid contentGrid = new Grid();
             contentGrid.Children.Add(txtName);
@@ -144,6 +133,7 @@ namespace Match_Tracker
 
         }
         #endregion
+
         #region scoreUpdates
         private void goalButton_Click(object sender, RoutedEventArgs e)
         {
@@ -179,19 +169,13 @@ namespace Match_Tracker
         #region Local Storage
 
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            //save score
+        {    
             var folder = ApplicationData.Current.LocalFolder;
-            //create folder or open
-            //var newFolder = await folder.CreateFolderAsync("gaaResults", CreationCollisionOption.OpenIfExists);
             //create text file or open
             var textFile = await folder.CreateFileAsync("soccerResults.txt", CreationCollisionOption.OpenIfExists);
-
             //Append to file
             await FileIO.AppendTextAsync(textFile, team1Name + ":" + score1Goal + ":" + team2Name + ":" + score2Goal + System.Environment.NewLine);
         }
         #endregion
-
-
     }
 }
