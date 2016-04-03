@@ -7,7 +7,7 @@ This is a universal app for the windows store. It can run on many platforms such
 Find out more about universal apps here:
 https://msdn.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp
 
-I chose this project because i love sport and wanted to make a sports based APP and to display my knowledge of local storage, Localisation, GPS Usage, Data binding, use of layouts and my general coding skill in C#.
+I chose this project because i love sport and wanted to make a sports based App and to display my knowledge of local storage, Localisation, GPS Usage, Data binding, use of layouts and my general coding skill in C#.
 
 I have designed this app to be simplistic to use for the user and have an attractive layout.
 
@@ -20,7 +20,7 @@ The user can view and delete the data.
 
 ##TECHNOLOGIES USED:
 
-###local storage:
+###Local storage:
 
 Files are stored in the devices local storage and files are appended to (Store data) and parsed (Retrieve data). 
 Files are .txt files
